@@ -17,11 +17,20 @@ const options = {
 };
 
 function searchMovies(query) {
+    const results = document.querySelector('#results');
+    results.textContent = '';
+
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
     fetch(url, options)
         .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+        .then(response => 
+            response.results.map(movie => {
+                const movieDiv = document.createElement('div');
+                const movieTitle = document.createElement('h2');
+                movieTitle.textContent = movie.title;
+                movieDiv.appendChild(movieTitle);
+                results.appendChild(movieDiv);
+            })
+        );
 }
-
