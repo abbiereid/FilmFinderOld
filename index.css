@@ -38,3 +38,17 @@ button {
 button:hover {
     background-color: #e0e0e0;
 }
+
+.movie {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 200px;
+    text-align: center;
+}
+
+img {
+    max-width: 40%;
+}

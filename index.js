@@ -1,9 +1,10 @@
 window.onload = function() {
     const search = document.querySelector('#searchForm');
+    const searchBar = document.querySelector('#search');
 
     search.addEventListener('submit', function(event) {
         event.preventDefault();
-        searchMovies(search.value);
+        searchMovies(searchBar.value);
     });
 };
 
@@ -27,9 +28,21 @@ function searchMovies(query) {
         .then(response => 
             response.results.map(movie => {
                 const movieDiv = document.createElement('div');
+                movieDiv.classList.add('movie');
+
                 const movieTitle = document.createElement('h2');
                 movieTitle.textContent = movie.title;
+
+                const movieOverview = document.createElement('p');
+                movieOverview.textContent = movie.overview;
+
+                const moviePoster = document.createElement('img');
+                moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+
                 movieDiv.appendChild(movieTitle);
+                movieDiv.appendChild(movieOverview);
+                movieDiv.appendChild(moviePoster);
+
                 results.appendChild(movieDiv);
             })
         );
