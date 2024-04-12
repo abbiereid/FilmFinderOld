@@ -39,16 +39,42 @@ button:hover {
     background-color: #e0e0e0;
 }
 
+
+#results {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+#results::-webkit-scrollbar {
+    height: 8px;
+}
+
+#results::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 4px;
+}
+
 .movie {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
     background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
+    margin-right: 20px;
 }
 
 img {
-    max-width: 40%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }

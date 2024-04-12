@@ -33,15 +33,15 @@ function searchMovies(query) {
                 const movieTitle = document.createElement('h2');
                 movieTitle.textContent = movie.title;
 
-                const movieOverview = document.createElement('p');
-                movieOverview.textContent = movie.overview;
-
                 const moviePoster = document.createElement('img');
                 moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
+                const movieOverview = document.createElement('p');
+                movieOverview.textContent = movie.overview;
+
                 movieDiv.appendChild(movieTitle);
-                movieDiv.appendChild(movieOverview);
                 movieDiv.appendChild(moviePoster);
+                movieDiv.appendChild(movieOverview);
 
                 results.appendChild(movieDiv);
             })
