@@ -52,26 +52,6 @@ button:hover {
     background-color: var(--accent-color);
 }
 
-#results {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px 0;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
-    background-color: var(--background-color);
-}
-
-#results::-webkit-scrollbar {
-    height: 8px;
-}
-
-#results::-webkit-scrollbar-thumb {
-    background-color: rgba(155, 155, 155, 0.7);
-    border-radius: 4px;
-}
-
 .movie {
     flex: 0 0 auto;
     scroll-snap-align: start;

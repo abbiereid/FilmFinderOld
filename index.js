@@ -18,7 +18,7 @@ const options = {
 };
 
 function searchMovies(query) {
-    const results = document.querySelector('#results');
+    const results = document.querySelector('.results');
     results.textContent = '';
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
