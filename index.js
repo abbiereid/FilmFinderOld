@@ -19,31 +19,23 @@ const options = {
 };
 
 function searchMovies(query) {
-    const results = document.querySelector('.cards');
-    results.classList.add('carousel');
+    const results = document.querySelector('.results');
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
     fetch(url, options)
         .then(response => response.json())
         .then(response => {
-            const movies = response.results.slice(0, 3);
-            const angleStep = 360 / movies.length;
+            const movies = response.results.slice(0, 5);
 
             movies.map((movie, index) => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('movie');
-                movieDiv.style.transform = `rotateY(${index * angleStep}deg) translateZ(300px)`;
-
+            
                 const moviePoster = document.createElement('img');
                 moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-
+            
                 movieDiv.appendChild(moviePoster);
-
-                movieDiv.addEventListener('click', () => {
-                    results.style.transform = `rotateY(${-index * angleStep}deg)`;
-                });
-
                 results.appendChild(movieDiv);
             });
         });
