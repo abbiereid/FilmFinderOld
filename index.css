@@ -54,7 +54,7 @@ hr {
     border-right: 1px solid var(--text-color); 
 }
 
-button {
+#searchButton {
     background: none;
     color: var(--text-color);
     border: 1px solid var(--text-color);
@@ -64,11 +64,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#searchButton:hover {
     background-color: var(--text-color);
 }
 
-button:hover svg {
+#searchButton:hover svg {
     fill: var(--background-color);
 }
 
@@ -81,7 +81,7 @@ svg {
     border-radius: 10px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 40%;
+    width: 30%;
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
@@ -101,4 +101,11 @@ img {
 
 .results {
     margin-top: 40px;
+}
+
+#openButton {
+    margin-right: 90%;
+    margin-top: 20px;
+    background: none;
+    border: none;
 }

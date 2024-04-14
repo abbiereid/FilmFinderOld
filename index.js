@@ -22,6 +22,16 @@ const options = {
 
 function searchMovies(query) {
     const results = document.querySelector('.results');
+
+    const openButton = document.querySelector('#openButton');
+    openButton.classList.toggle('hidden');
+    const menu = document.querySelector('#menu');
+    menu.classList.toggle('hidden');
+
+    openButton.addEventListener('click', function() {
+        openButton.classList.toggle('hidden');
+        menu.classList.toggle('hidden');
+    });
       
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
