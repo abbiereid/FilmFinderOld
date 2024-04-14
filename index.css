@@ -8,6 +8,8 @@
 
 body {
     background-image: url(bg2possible.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0 auto;
