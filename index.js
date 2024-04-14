@@ -20,31 +20,31 @@ const options = {
 
 function searchMovies(query) {
     const results = document.querySelector('.cards');
+    results.classList.add('carousel');
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
     fetch(url, options)
         .then(response => response.json())
-        .then(response => 
-            response.results.map(movie => {
+        .then(response => {
+            const movies = response.results.slice(0, 3);
+            const angleStep = 360 / movies.length;
+
+            movies.map((movie, index) => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('movie');
+                movieDiv.style.transform = `rotateY(${index * angleStep}deg) translateZ(300px)`;
 
-                const movieTitle = document.createElement('h2');
-                movieTitle.textContent = movie.title;
-
-                //need to change to an image object i can check if loads. Also need to find some alt text.
                 const moviePoster = document.createElement('img');
                 moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-                //const movieOverview = document.createElement('p');
-                //movieOverview.textContent = movie.overview;
-
-                //movieDiv.appendChild(movieTitle);
                 movieDiv.appendChild(moviePoster);
-                //movieDiv.appendChild(movieOverview);
+
+                movieDiv.addEventListener('click', () => {
+                    results.style.transform = `rotateY(${-index * angleStep}deg)`;
+                });
 
                 results.appendChild(movieDiv);
-            })
-        );
+            });
+        });
 }
