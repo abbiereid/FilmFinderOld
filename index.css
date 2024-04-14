@@ -56,7 +56,6 @@ button:hover {
     flex: 0 0 auto;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    padding: 20px;
     border: none;
     border-radius: 10px;
     background-color: var(--secondary-color);
@@ -68,7 +67,7 @@ button:hover {
 }
 
 img {
-    width: 75%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }

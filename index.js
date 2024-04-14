@@ -32,15 +32,16 @@ function searchMovies(query) {
                 const movieTitle = document.createElement('h2');
                 movieTitle.textContent = movie.title;
 
+                //need to change to an image object i can check if loads. Also need to find some alt text.
                 const moviePoster = document.createElement('img');
                 moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-                const movieOverview = document.createElement('p');
-                movieOverview.textContent = movie.overview;
+                //const movieOverview = document.createElement('p');
+                //movieOverview.textContent = movie.overview;
 
-                movieDiv.appendChild(movieTitle);
+                //movieDiv.appendChild(movieTitle);
                 movieDiv.appendChild(moviePoster);
-                movieDiv.appendChild(movieOverview);
+                //movieDiv.appendChild(movieOverview);
 
                 results.appendChild(movieDiv);
             })
