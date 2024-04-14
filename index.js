@@ -1,6 +1,7 @@
 window.onload = function() {
     const search = document.querySelector('#searchForm');
     const searchBar = document.querySelector('#search');
+    const searchButton = document.querySelector('#searchButton');
 
     search.addEventListener('submit', function(event) {
         event.preventDefault();

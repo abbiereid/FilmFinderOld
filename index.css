@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(bg2possible.png);
+    background-color: var(--background-color);
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--text-color);
@@ -29,50 +29,58 @@ hr {
     border-color: var(--text-color);
 }
 
-#search {
+#searchForm {
     margin-top: 20px;
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    outline: none;
-    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
 }
 
-#search:focus {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+#search {
+    border: 1px solid #ffffff;
+    border-radius: 5px 0 0 5px;
+    background-color: transparent;
+    padding: 10px;
+    width: 30%;
+    color: var(--text-color);
+    font-size: large;
+    border-right: 1px solid var(--text-color); 
 }
 
 button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 50px;
-    background-color: var(--accent-color);
+    background: none;
     color: var(--text-color);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid var(--text-color);
+    border-radius: 0 5px 5px 0;
+    padding: 10px 15px;
+    font-size: large;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
+    background-color: var(--text-color);
+}
+
+button:hover svg {
+    fill: var(--background-color);
+}
+
+svg {
+    fill: var(--text-color);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .movie {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     border: none;
     border-radius: 10px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 28%;
+    width: 18%;
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
@@ -82,4 +90,9 @@ img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
