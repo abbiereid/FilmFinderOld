@@ -8,10 +8,10 @@
 
 body {
     background-color: var(--background-color);
-    background-size: cover;
-    background-repeat: no-repeat;
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0 auto;
     text-align: center;
 }
@@ -24,9 +24,16 @@ body {
     display: none;
 }
 
+h1 {
+    font-size: 4rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 hr {
     width: 40%;
     border-color: var(--text-color);
+    margin-bottom: 40px;
 }
 
 #searchForm {
