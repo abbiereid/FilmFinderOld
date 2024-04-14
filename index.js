@@ -36,10 +36,12 @@ function searchMovies(query) {
                 const movieImage = new Image();
                 movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
             
-                movieImage.onload = function() {
-                    movieDiv.appendChild(movieImage);
-                }
+                movieDiv.appendChild(movieImage);
                 results.appendChild(movieDiv);
+
+                movieImage.onload = function() {
+                    flkty.resize();
+                };
             });
 
             var flkty = new Flickity( results, {
