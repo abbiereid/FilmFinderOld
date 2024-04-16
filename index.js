@@ -22,6 +22,7 @@ const options = {
 
 function searchMovies(query) {
     const results = document.querySelector('.results');
+    results.innerHTML = '';
 
     const openButton = document.querySelector('#openButton');
     openButton.classList.toggle('hidden');
