@@ -85,7 +85,7 @@ svg {
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
-    filter: grayscale(100%);
+    filter: grayscale(90%);
 }
 
 img {
@@ -101,7 +101,7 @@ img {
 
 .results {
     margin-top: 40px;
-    height: 60%;
+    height: 50%;
 }
 
 #openButton {
