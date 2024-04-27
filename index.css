@@ -1,7 +1,6 @@
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #333333;
-    --tertiary-color: #4d4d4d;
     --accent-color: #ff5e3a;
     --text-color: #ffffff;
     --background-color: #1a1a1a;
@@ -91,32 +90,18 @@ svg {
 .movie {
     border: none;
     border-radius: 10px;
-    background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 102%;
-    max-width: 50%;
-    filter: blur(3px);
+    filter: blur(5px);
     transition: filter 0.3s;
-    padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.imageSection {
-    flex: 1;
-}
-
-.textSection {
-    flex: 1;
-    padding: 10px;
+    height: 35rem;
 }
 
 img {
-    height: 90%;
     border-radius: 5px;
+    height: 100%;
 }
 
 .movie.is-selected {
