@@ -65,12 +65,20 @@ function searchMovies(query) {
                     const searchDiv = document.querySelector('.searchDiv');
                     searchDiv.classList.toggle('hidden');
 
+                    const expandedImage = new Image();
+                    expandedImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                    expandedImage.alt = movie.title;
+
+                    expanded.appendChild(expandedImage);
+
                     const backButton = document.querySelector('#backButton');
                     backButton.addEventListener('click', function() {
+                        expandedImage.remove();
                         results.classList.toggle('hidden');
                         expanded.classList.toggle('hidden');
                         searchDiv.classList.toggle('hidden');
                     });
+
                 });
             });
         });
