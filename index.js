@@ -22,6 +22,7 @@ const options = {
 
 function searchMovies(query) {
     const results = document.querySelector('.results');
+    const expanded = document.querySelector('.expanded');
     results.innerHTML = '';
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
@@ -56,6 +57,11 @@ function searchMovies(query) {
                     flkty.append(movieDiv);
                     flkty.resize();
                 };
+
+                movieDiv.addEventListener('dblclick', function() {
+                    results.classList.toggle('hidden');
+                    expanded.classList.toggle('hidden');
+                });
             });
         });
 }
