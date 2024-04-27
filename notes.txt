@@ -1,0 +1,4 @@
+- maybe get rid of plot on average movie card, have genres title and poster. (and eventually like/heart button)
+- need to style movie cards properly
+- Expand button, opens full movie page, gives all details, larger image.
+- Hover over image, causes filter and option to open image in new tab.
