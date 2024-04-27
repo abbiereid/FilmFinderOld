@@ -46,7 +46,6 @@ function searchMovies(query) {
                 wrapAround: true
             });
 
-
             response.results.map((movie) => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('movie');
@@ -70,6 +69,7 @@ function searchMovies(query) {
                     flkty.append(movieDiv);
                     flkty.resize();
                 };
+
             });
 
         });

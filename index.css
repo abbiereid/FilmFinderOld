@@ -85,8 +85,9 @@ svg {
     border-radius: 10px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 30%;
     text-align: center;
+    height: 102%;
+    max-width: 30%;
     margin-right: 10px;
     margin-left: 10px;
     filter: grayscale(90%);
@@ -95,7 +96,7 @@ svg {
 }
 
 img {
-    width: 50%;
+    width: 37%;
     height: auto;
     border-radius: 10px;
 }
@@ -106,12 +107,11 @@ img {
 
 .results {
     margin-top: 40px;
-    height: 100%;
 }
 
-#openButton {
+/*#openButton {
     margin-right: 90%;
     margin-top: 20px;
     background: none;
     border: none;
-}
+}*/
