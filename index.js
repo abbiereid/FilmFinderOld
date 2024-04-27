@@ -61,6 +61,9 @@ function searchMovies(query) {
                 movieDiv.addEventListener('dblclick', function() {
                     results.classList.toggle('hidden');
                     expanded.classList.toggle('hidden');
+
+                    const searchDiv = document.querySelector('.searchDiv');
+                    searchDiv.classList.toggle('hidden');
                 });
             });
         });

@@ -128,10 +128,18 @@ img {
 .movie.is-selected {
     filter: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .results {
     margin-top: 40px;
 }
 
+#backButton {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 4%;
+    margin: 20px;
+}
 
