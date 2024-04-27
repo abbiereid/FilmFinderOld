@@ -2,3 +2,4 @@
 - need to style movie cards properly
 - Expand button, opens full movie page, gives all details, larger image.
 - Hover over image, causes filter and option to open image in new tab.
+- dont like normal text font
