@@ -40,6 +40,13 @@ function searchMovies(query) {
     fetch(url, options)
         .then(response => response.json())
         .then(response => {
+
+            var flkty = new Flickity( results, {
+                contain: true,
+                wrapAround: true
+            });
+
+
             response.results.map((movie) => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('movie');
@@ -60,13 +67,9 @@ function searchMovies(query) {
 
 
                 movieImage.onload = function() {
+                    flkty.append(movieDiv);
                     flkty.resize();
                 };
-            });
-
-            var flkty = new Flickity( results, {
-                contain: true,
-                wrapAround: true
             });
 
         });
