@@ -88,11 +88,11 @@ svg {
     text-align: center;
     height: 102%;
     max-width: 30%;
-    margin-right: 10px;
-    margin-left: 10px;
     filter: grayscale(90%);
     transition: filter 0.3s;
     padding: 10px;
+    margin-left: -150px;
+    margin-right: -150px;
 }
 
 img {
@@ -103,6 +103,7 @@ img {
 
 .movie.is-selected {
     filter: none;
+    z-index: 1;
 }
 
 .results {
