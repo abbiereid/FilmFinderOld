@@ -9,8 +9,7 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    font-family: "K2D", sans-serif;
     font-style: normal;
     margin: 0 auto;
     text-align: center;
@@ -29,6 +28,7 @@ h1 {
     font-size: 4rem;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 hr {
@@ -52,6 +52,10 @@ hr {
     color: var(--text-color);
     font-size: large;
     border-right: 1px solid var(--text-color); 
+}
+
+#search:focus {
+    outline: none;
 }
 
 #searchButton {
@@ -82,14 +86,17 @@ svg {
     background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 30%;
+    height: 60%;
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
     filter: grayscale(90%);
+    transition: filter 0.3s;
+    padding: 10px;
 }
 
 img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
 }
@@ -98,10 +105,9 @@ img {
     filter: none;
 }
 
-
 .results {
     margin-top: 40px;
-    height: 50%;
+    height: 100%;
 }
 
 #openButton {

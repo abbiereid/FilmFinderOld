@@ -24,7 +24,7 @@ function searchMovies(query) {
     const results = document.querySelector('.results');
     results.innerHTML = '';
 
-    const openButton = document.querySelector('#openButton');
+    /*const openButton = document.querySelector('#openButton');
     openButton.classList.toggle('hidden');
     const menu = document.querySelector('#menu');
     menu.classList.toggle('hidden');
@@ -32,7 +32,7 @@ function searchMovies(query) {
     openButton.addEventListener('click', function() {
         openButton.classList.toggle('hidden');
         menu.classList.toggle('hidden');
-    });
+    });*/
       
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
@@ -46,9 +46,18 @@ function searchMovies(query) {
             
                 const movieImage = new Image();
                 movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+
+                const movieTitle = document.createElement('h2');
+                movieTitle.textContent = movie.title;
+                
+                const movieOverview = document.createElement('p');
+                movieOverview.textContent = movie.overview;
             
                 movieDiv.appendChild(movieImage);
+                movieDiv.appendChild(movieTitle);
+                movieDiv.appendChild(movieOverview);
                 results.appendChild(movieDiv);
+
 
                 movieImage.onload = function() {
                     flkty.resize();
