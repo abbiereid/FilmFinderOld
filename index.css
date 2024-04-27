@@ -1,6 +1,7 @@
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #333333;
+    --tertiary-color: #4d4d4d;
     --accent-color: #ff5e3a;
     --text-color: #ffffff;
     --background-color: #1a1a1a;
@@ -26,6 +27,13 @@ body {
 
 h1 {
     font-size: 4rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+    font-size: 2.4rem;
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Bebas Neue", sans-serif;
@@ -87,32 +95,37 @@ svg {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     height: 102%;
-    max-width: 30%;
-    filter: grayscale(90%);
+    max-width: 50%;
+    filter: blur(5px);
     transition: filter 0.3s;
     padding: 10px;
-    margin-left: -150px;
-    margin-right: -150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageSection {
+    flex: 1;
+}
+
+.textSection {
+    flex: 1;
 }
 
 img {
-    width: 37%;
-    height: auto;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 .movie.is-selected {
     filter: none;
-    z-index: 1;
 }
 
 .results {
     margin-top: 40px;
 }
 
-/*#openButton {
-    margin-right: 90%;
-    margin-top: 20px;
-    background: none;
-    border: none;
-}*/
+

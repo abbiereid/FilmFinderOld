@@ -49,6 +49,12 @@ function searchMovies(query) {
             response.results.map((movie) => {
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add('movie');
+
+                const imageDiv = document.createElement('div');
+                imageDiv.classList.add('imageSection');
+
+                const textDiv = document.createElement('div');
+                textDiv.classList.add('textSection');
             
                 const movieImage = new Image();
                 movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -59,9 +65,13 @@ function searchMovies(query) {
                 const movieOverview = document.createElement('p');
                 movieOverview.textContent = movie.overview;
             
-                movieDiv.appendChild(movieImage);
-                movieDiv.appendChild(movieTitle);
-                movieDiv.appendChild(movieOverview);
+                imageDiv.appendChild(movieImage);
+                textDiv.appendChild(movieTitle);
+                textDiv.appendChild(movieOverview);
+                
+                movieDiv.appendChild(imageDiv);
+                movieDiv.appendChild(textDiv);
+
                 results.appendChild(movieDiv);
 
 
