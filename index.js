@@ -64,6 +64,13 @@ function searchMovies(query) {
 
                     const searchDiv = document.querySelector('.searchDiv');
                     searchDiv.classList.toggle('hidden');
+
+                    const backButton = document.querySelector('#backButton');
+                    backButton.addEventListener('click', function() {
+                        results.classList.toggle('hidden');
+                        expanded.classList.toggle('hidden');
+                        searchDiv.classList.toggle('hidden');
+                    });
                 });
             });
         });
