@@ -41,6 +41,8 @@ function searchMovies(query) {
             
                 const movieImage = new Image();
                 movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                movieImage.alt = movie.title;
+                movieImage.classList.add('clickable');
                 
                 movieDiv.appendChild(movieImage);
                 results.appendChild(movieDiv);
