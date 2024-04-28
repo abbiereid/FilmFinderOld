@@ -23,6 +23,14 @@ function searchMovies(query) {
     const expanded = document.querySelector('.expanded');
     results.innerHTML = '';
 
+    if (query === '') {
+        const error = document.createElement('p');
+        error.textContent = 'Please enter a search query';
+        error.classList.add('error');
+        results.appendChild(error);
+        return;
+    }
+
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
     fetch(url, options)

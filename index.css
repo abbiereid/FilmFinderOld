@@ -171,6 +171,13 @@ img {
     transform: scale(1.03);
 }
 
+.error {
+    color: red;
+    font-size: x-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .clickable {
     cursor: pointer;
 }
