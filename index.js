@@ -30,6 +30,7 @@ function searchMovies(query) {
     fetch(url, options)
         .then(response => response.json())
         .then(response => {
+            console.log(response);
 
             var flkty = new Flickity( results, {
                 contain: true,
@@ -78,8 +79,15 @@ function searchMovies(query) {
                     const expandedTitle = document.createElement('h1');
                     expandedTitle.textContent = movie.title;
 
+                    const hr = document.createElement('hr');
+
+                    const expandedOverview = document.createElement('p');
+                    expandedOverview.textContent = movie.overview;
+
                     imageSection.appendChild(expandedImage);
                     textSection.appendChild(expandedTitle);
+                    textSection.appendChild(hr);
+                    textSection.appendChild(expandedOverview);
 
                     const backButton = document.querySelector('#backButton');
                     backButton.addEventListener('click', function() {
