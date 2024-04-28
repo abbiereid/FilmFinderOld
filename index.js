@@ -84,10 +84,14 @@ function searchMovies(query) {
                     const expandedOverview = document.createElement('p');
                     expandedOverview.textContent = movie.overview;
 
+                    const date = document.createElement('h3');
+                    date.textContent = `Release Date: ${movie.release_date}`;
+
                     imageSection.appendChild(expandedImage);
                     textSection.appendChild(expandedTitle);
                     textSection.appendChild(hr);
                     textSection.appendChild(expandedOverview);
+                    textSection.appendChild(date);
 
                     const backButton = document.querySelector('#backButton');
                     backButton.addEventListener('click', function() {
