@@ -16,14 +16,6 @@ body {
     overflow: hidden;
 }
 
-.clickable {
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
 h1 {
     font-size: 4rem;
     margin-top: 20px;
@@ -140,13 +132,23 @@ img {
     justify-content: space-between;
 }
 
-
-
 #backButton {
     top: 0;
     left: 0;
-    position: fixed;
     width: 4%;
     margin: 20px;
+    position: absolute;
+}
+
+#backButton:hover {
+    transform: scale(1.03);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 

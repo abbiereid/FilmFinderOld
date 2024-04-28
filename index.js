@@ -65,10 +65,14 @@ function searchMovies(query) {
                     const searchDiv = document.querySelector('.searchDiv');
                     searchDiv.classList.toggle('hidden');
 
-                    const imageSection = document.querySelector('.expandedImage');
-                    const textSection = document.querySelector('.expandedText');
-                    imageSection.innerHTML = '';
-                    textSection.innerHTML = '';
+                    const imageSection = document.createElement('div');
+                    imageSection.classList.add('expandedImage');
+                    
+                    const textSection = document.createElement('div');
+                    textSection.classList.add('expandedText');
+
+                    expanded.appendChild(imageSection);
+                    expanded.appendChild(textSection);
 
                     const expandedImage = new Image();
                     expandedImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -82,6 +86,8 @@ function searchMovies(query) {
 
                     const backButton = document.querySelector('#backButton');
                     backButton.addEventListener('click', function() {
+                        expanded.removeChild(imageSection);
+                        expanded.removeChild(textSection);
                         results.classList.toggle('hidden');
                         expanded.classList.toggle('hidden');
                         searchDiv.classList.toggle('hidden');
