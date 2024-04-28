@@ -18,7 +18,7 @@ const options = {
     }
 };
 
-function searchMovies(query) {
+async function searchMovies(query) {
     const results = document.querySelector('.results');
     const expanded = document.querySelector('.expanded');
     results.innerHTML = '';
@@ -33,7 +33,7 @@ function searchMovies(query) {
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
-    fetch(url, options)
+    await fetch(url, options)
         .then(response => response.json())
         .then(response => {
             console.log(response);
@@ -91,6 +91,13 @@ function searchMovies(query) {
                 });
 
             });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            const errorElement = document.createElement('p');
+            errorElement.textContent = 'An error occured, please try again';
+            errorElement.classList.add('error');
+            results.appendChild(errorElement);
         });
 }
 
