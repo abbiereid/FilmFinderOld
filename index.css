@@ -204,17 +204,41 @@ img {
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     margin-top: auto;
 }
 
+.credits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .tmdbImg {
     width: 200px;
+    margin-bottom: -30px;
+    margin-top: -30px;
 }
 
 .tmdbImg:hover {
     transform: scale(1.03);
+}
+
+.githubIcon {
+    width: 50px;
+}
+
+.githubIcon:hover {
+    transform: scale(1.03);
+}
+
+.creatorSection {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tmdbSection {
+    margin-right: auto;
+    margin-left: auto;
 }
