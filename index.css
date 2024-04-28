@@ -132,6 +132,14 @@ img {
     justify-content: space-between;
 }
 
+.expandedImage {
+    margin: 20px;
+}
+
+.expandedText {
+    
+}
+
 #backButton {
     top: 0;
     left: 0;
