@@ -85,12 +85,13 @@ function searchMovies(query) {
                     const date = document.createElement('h3');
                     date.textContent = `Release Date: ${movie.release_date}`;
 
-                    const rating = movie.vote_average * 10; //want it to be out of 100
+                    const rating = movie.vote_average * 10;
 
                     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
                     svg.classList.add("rating");
                     svg.setAttribute("viewBox", "0 0 36 36");
-
+                    svg.style.transform = "rotate(-90deg)";
+                    
                     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                     circle.setAttribute("class", "circle");
                     circle.setAttribute("stroke", "grey");
@@ -98,26 +99,36 @@ function searchMovies(query) {
                     circle.setAttribute("r", "16");
                     circle.setAttribute("cx", "18");
                     circle.setAttribute("cy", "18");
-                    circle.setAttribute("stroke-width", "2");
+                    circle.setAttribute("stroke-width", "3");
                     svg.appendChild(circle);
-
+                    
                     const progress = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                     progress.setAttribute("class", "progress");
-                    progress.setAttribute("stroke", "red");
                     progress.setAttribute("fill", "transparent");
                     progress.setAttribute("r", "16");
                     progress.setAttribute("cx", "18");
                     progress.setAttribute("cy", "18");
                     progress.setAttribute("stroke-dasharray", `${rating}, 100`);
-                    progress.setAttribute("stroke-width", "2");
+                    progress.setAttribute("stroke-width", "3");
+                    
+                    if (rating >= 70) {
+                        progress.setAttribute("stroke", "green");
+                    } else if (rating >= 40) {
+                        progress.setAttribute("stroke", "orange");
+                    } else {
+                        progress.setAttribute("stroke", "red");
+                    }
+                    
                     svg.appendChild(progress);
-
+                    
                     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
                     text.setAttribute("x", "18");
-                    text.setAttribute("y", "22");
+                    text.setAttribute("y", "20");
                     text.setAttribute("text-anchor", "middle");
                     text.textContent = rating + "%";
-                    text.style.fontSize = "50%";
+                    text.style.fontSize = "40%";
+                    text.style.transform = "rotate(90deg)";
+                    text.style.transformOrigin = "center";
                     svg.appendChild(text);
 
                     imageSection.appendChild(expandedImage);
