@@ -84,6 +84,10 @@ async function searchMovies(query) {
                 movieDiv.appendChild(movieImage);
                 results.appendChild(movieDiv);
 
+                movieImage.onerror = function() {
+                    movieImage.src = 'https://via.placeholder.com/500x750';
+                };
+
                 movieImage.onload = function() {
                     flkty.append(movieDiv);
                     flkty.resize();
