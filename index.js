@@ -38,6 +38,14 @@ function searchMovies(query) {
         .then(response => {
             console.log(response);
 
+            if (response.results.length === 0) {
+                const error = document.createElement('p');
+                error.textContent = 'No results found';
+                error.classList.add('error');
+                results.appendChild(error);
+                return;
+            }
+
             var flkty = new Flickity( results, {
                 contain: true,
                 wrapAround: true
