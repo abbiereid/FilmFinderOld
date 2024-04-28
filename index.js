@@ -170,9 +170,13 @@ function expandMovie(movie) {
     textSection.appendChild(svg);
 
     const backButton = document.querySelector('#backButton');
-    backButton.addEventListener('click', function() {
+
+    const toggleVisibility = function() {
         results.classList.toggle('hidden');
         expanded.classList.toggle('hidden');
         searchDiv.classList.toggle('hidden');
-    });
+        backButton.removeEventListener('click', toggleVisibility);
+    };
+
+    backButton.addEventListener('click', toggleVisibility);
 }
