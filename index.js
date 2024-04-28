@@ -98,6 +98,7 @@ function searchMovies(query) {
                     circle.setAttribute("r", "16");
                     circle.setAttribute("cx", "18");
                     circle.setAttribute("cy", "18");
+                    circle.setAttribute("stroke-width", "2");
                     svg.appendChild(circle);
 
                     const progress = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -108,7 +109,16 @@ function searchMovies(query) {
                     progress.setAttribute("cx", "18");
                     progress.setAttribute("cy", "18");
                     progress.setAttribute("stroke-dasharray", `${rating}, 100`);
+                    progress.setAttribute("stroke-width", "2");
                     svg.appendChild(progress);
+
+                    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    text.setAttribute("x", "18");
+                    text.setAttribute("y", "22");
+                    text.setAttribute("text-anchor", "middle");
+                    text.textContent = rating + "%";
+                    text.style.fontSize = "50%";
+                    svg.appendChild(text);
 
                     imageSection.appendChild(expandedImage);
                     textSection.appendChild(expandedTitle);
