@@ -103,7 +103,7 @@ function searchMovies(query) {
 
                     const progress = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                     progress.setAttribute("class", "progress");
-                    progress.setAttribute("stroke", "green");
+                    progress.setAttribute("stroke", "red");
                     progress.setAttribute("fill", "transparent");
                     progress.setAttribute("r", "16");
                     progress.setAttribute("cx", "18");
