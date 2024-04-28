@@ -151,6 +151,14 @@ img {
     position: absolute;
 }
 
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 15%;
+}
+
 #backButton:hover {
     transform: scale(1.03);
 }

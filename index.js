@@ -85,13 +85,37 @@ function searchMovies(query) {
                     const date = document.createElement('h3');
                     date.textContent = `Release Date: ${movie.release_date}`;
 
-                    
+                    const rating = movie.vote_average * 10; //want it to be out of 100
+
+                    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    svg.classList.add("rating");
+                    svg.setAttribute("viewBox", "0 0 36 36");
+
+                    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                    circle.setAttribute("class", "circle");
+                    circle.setAttribute("stroke", "grey");
+                    circle.setAttribute("fill", "transparent");
+                    circle.setAttribute("r", "16");
+                    circle.setAttribute("cx", "18");
+                    circle.setAttribute("cy", "18");
+                    svg.appendChild(circle);
+
+                    const progress = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                    progress.setAttribute("class", "progress");
+                    progress.setAttribute("stroke", "green");
+                    progress.setAttribute("fill", "transparent");
+                    progress.setAttribute("r", "16");
+                    progress.setAttribute("cx", "18");
+                    progress.setAttribute("cy", "18");
+                    progress.setAttribute("stroke-dasharray", `${rating}, 100`);
+                    svg.appendChild(progress);
 
                     imageSection.appendChild(expandedImage);
                     textSection.appendChild(expandedTitle);
                     textSection.appendChild(hr);
                     textSection.appendChild(expandedOverview);
                     textSection.appendChild(date);
+                    textSection.appendChild(svg);
 
                     const backButton = document.querySelector('#backButton');
                     backButton.addEventListener('click', function() {
