@@ -133,8 +133,13 @@ img {
 }
 
 .expandedImage {
-    margin-left: 200px;
-    margin-top: 40px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.expandedImage img {
+    border-radius: 10px;
+    height: 98%;
 }
 
 .expandedText {
