@@ -144,8 +144,9 @@ img {
 
 .expandedText {
     margin-top: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 100px 0 100px;
 }
 
 #backButton {
@@ -162,6 +163,8 @@ img {
     align-items: center;
     margin-top: 20px;
     width: 15%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #backButton:hover {
