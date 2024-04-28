@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background: linear-gradient(to right, #0a0324, #063839);
     color: var(--text-color);
     font-family: "K2D", sans-serif;
     font-style: normal;
@@ -132,7 +132,7 @@ img {
 
 .movie.is-selected {
     filter: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
