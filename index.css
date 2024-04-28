@@ -13,6 +13,9 @@ body {
     font-style: normal;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .menuButton {
@@ -200,3 +203,19 @@ img {
     display: none;
 }
 
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: auto;
+}
+
+.tmdbImg {
+    width: 200px;
+}
+
+.tmdbImg:hover {
+    transform: scale(1.03);
+}
