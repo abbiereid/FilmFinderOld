@@ -13,7 +13,6 @@ body {
     font-style: normal;
     margin: 0 auto;
     text-align: center;
-    overflow: hidden;
 }
 
 h1 {
@@ -186,3 +185,95 @@ img {
     display: none;
 }
 
+.flickity-page-dots {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    hr {
+        width: 60%;
+    }
+
+    #search {
+        width: 50%;
+    }
+
+    .movie {
+        height: 25rem;
+    }
+
+    .expanded {
+        flex-direction: column;
+    }
+
+    .expandedImage {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .expandedImage img {
+        height: 60%;
+    }
+
+    .expandedText {
+        padding: 0;
+    }
+
+    #backButton {
+        width: 8%;
+    }
+
+    .rating {
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+    #search {
+        width: 70%;
+    }
+
+    .movie {
+        height: 20rem;
+    }
+
+    .expandedImage img {
+        height: 50%;
+    }
+
+    #backButton {
+        width: 12%;
+    }
+
+    .rating {
+        width: 30%;
+    }
+}
