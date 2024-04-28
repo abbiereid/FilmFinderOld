@@ -116,7 +116,7 @@ function expandMovie(movie) {
     const date = document.createElement('h3');
     date.textContent = `Release Date: ${movie.release_date}`;
 
-    const rating = movie.vote_average * 10;
+    const rating = (Math.round(movie.vote_average * 10)).toFixed(0);
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.classList.add("rating");
