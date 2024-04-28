@@ -7,6 +7,12 @@ window.onload = function() {
         event.preventDefault();
         searchMovies(searchBar.value);
     });
+
+    const navButton = document.querySelector('.menuButton');
+    const nav = document.querySelector('.menu');
+    navButton.addEventListener('click', function() {
+        nav.classList.toggle('hidden');
+    });
 };
 
 
@@ -21,6 +27,9 @@ const options = {
 async function searchMovies(query) {
     const results = document.querySelector('.results');
     const expanded = document.querySelector('.expanded');
+    const nav = document.querySelector('.menu');
+
+    nav.classList.add('hidden');
     results.innerHTML = '';
 
     if (query === '') {
@@ -107,8 +116,11 @@ function expandMovie(movie) {
     results.classList.toggle('hidden');
     expanded.classList.toggle('hidden');
 
-    const searchDiv = document.querySelector('.menu');
-    searchDiv.classList.toggle('hidden');
+    const nav = document.querySelector('.menu');
+    nav.classList.add('hidden');
+
+    const navButton = document.querySelector('.menuButton');
+    navButton.classList.add('hidden');
 
     const imageSection = document.querySelector('.expandedImage');
     const textSection = document.querySelector('.expandedText');
@@ -189,7 +201,8 @@ function expandMovie(movie) {
     const toggleVisibility = function() {
         results.classList.toggle('hidden');
         expanded.classList.toggle('hidden');
-        searchDiv.classList.toggle('hidden');
+        //nav.classList.remove('hidden');
+        navButton.classList.remove('hidden');
         backButton.removeEventListener('click', toggleVisibility);
     };
 

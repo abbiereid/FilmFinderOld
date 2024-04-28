@@ -15,6 +15,18 @@ body {
     text-align: center;
 }
 
+.menuButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    width: 3%;
+}
+
+.menuButton:hover {
+    transform: scale(1.03);
+}
+
 h1 {
     font-size: 4rem;
     margin-top: 20px;
@@ -85,8 +97,7 @@ svg {
     transition: filter 0.3s;
     margin-left: 10px;
     margin-right: 10px;
-    height: 35rem;
-    position: relative;
+    height: 40rem;
 }
 
 img {
@@ -123,7 +134,7 @@ img {
 }
 
 .results {
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .expanded {
@@ -189,91 +200,3 @@ img {
     display: none;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    hr {
-        width: 60%;
-    }
-
-    #search {
-        width: 50%;
-    }
-
-    .movie {
-        height: 25rem;
-    }
-
-    .expanded {
-        flex-direction: column;
-    }
-
-    .expandedImage {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .expandedImage img {
-        height: 60%;
-    }
-
-    .expandedText {
-        padding: 0;
-    }
-
-    #backButton {
-        width: 8%;
-    }
-
-    .rating {
-        width: 20%;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    hr {
-        width: 80%;
-    }
-
-    #search {
-        width: 70%;
-    }
-
-    .movie {
-        height: 20rem;
-    }
-
-    .expandedImage img {
-        height: 50%;
-    }
-
-    #backButton {
-        width: 12%;
-    }
-
-    .rating {
-        width: 30%;
-    }
-}
