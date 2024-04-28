@@ -209,16 +209,14 @@ footer {
     margin-top: auto;
 }
 
-.credits {
+/*.credits {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+}*/
 
 .tmdbImg {
     width: 200px;
-    margin-bottom: -30px;
-    margin-top: -30px;
 }
 
 .tmdbImg:hover {
@@ -236,6 +234,7 @@ footer {
 .creatorSection {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
 }
 
 .tmdbSection {
