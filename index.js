@@ -24,13 +24,25 @@ const options = {
     }
 };
 
+let flkty;
+
 async function searchMovies(query) {
     const results = document.querySelector('.results');
     const expanded = document.querySelector('.expanded');
     const nav = document.querySelector('.menu');
 
     nav.classList.add('hidden');
+
+    if (flkty) {
+        flkty.destroy();
+    }
+
     results.innerHTML = '';
+        
+    flkty = new Flickity( results, {
+        contain: true,
+        wrapAround: true
+    });
 
     if (query === '') {
         const error = document.createElement('p');
@@ -54,11 +66,6 @@ async function searchMovies(query) {
                 results.appendChild(error);
                 return;
             }
-
-            var flkty = new Flickity( results, {
-                contain: true,
-                wrapAround: true
-            });
 
             response.results.map((movie) => {
                 const movieDiv = document.createElement('div');
