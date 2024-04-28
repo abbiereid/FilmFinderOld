@@ -7,8 +7,6 @@ window.onload = function() {
         event.preventDefault();
         searchMovies(searchBar.value);
     });
-
-    
 };
 
 
@@ -86,6 +84,8 @@ function searchMovies(query) {
 
                     const date = document.createElement('h3');
                     date.textContent = `Release Date: ${movie.release_date}`;
+
+                    
 
                     imageSection.appendChild(expandedImage);
                     textSection.appendChild(expandedTitle);
