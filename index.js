@@ -200,7 +200,13 @@ function expandMovie(movie) {
     text.style.transformOrigin = "center";
     svg.appendChild(text);
 
+    expandedImage.onerror = function() {
+        expandedImage.src = 'https://via.placeholder.com/500x750';
+    };
+    
     imageSection.appendChild(expandedImage);
+
+
     textSection.appendChild(expandedTitle);
     textSection.appendChild(hr);
     textSection.appendChild(expandedOverview);
