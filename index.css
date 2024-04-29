@@ -244,9 +244,61 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .movie {
-        height: 38rem;
+    h1 {
+        font-size: 3rem;
     }
 
-    
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .movie {
+        height: 30rem;
+    }
+
+    .rating {
+        width: 20%;
+    }
+
+    #search {
+        width: 60%;
+    }
+
+    #searchButton {
+        padding: 10px 10px;
+    }
+
+    .expanded {
+        flex-direction: column;
+    }
+
+    .expandedImage {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .expandedImage img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .expandedText {
+        padding: 0 20px 0 20px;
+    }
+
+    .tmdbImg {
+        width: 150px;
+    }
+
+    .tmdbSection {
+        margin-bottom: 10px;
+    }
+
+    #backButton {
+        width: 9%;
+    }
+
+    .menuButton {
+        width: 10%;
+    }
 }
