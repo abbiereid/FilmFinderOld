@@ -130,6 +130,9 @@ function expandMovie(movie) {
     const nav = document.querySelector('.menu');
     nav.classList.add('hidden');
 
+    const header = document.querySelector('header');
+    header.classList.add('hidden');
+
     const navButton = document.querySelector('.menuButton');
     navButton.classList.add('hidden');
 
@@ -218,7 +221,7 @@ function expandMovie(movie) {
     const toggleVisibility = function() {
         results.classList.toggle('hidden');
         expanded.classList.toggle('hidden');
-        //nav.classList.remove('hidden');
+        header.classList.remove('hidden');
         navButton.classList.remove('hidden');
         backButton.removeEventListener('click', toggleVisibility);
     };

@@ -54,6 +54,7 @@ hr {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 #search {
@@ -136,9 +137,9 @@ img {
     z-index: 1;
 }
 
-.results {
+/* .results {
     margin-top: 100px;
-}
+} */
 
 .expanded {
     display: flex;
@@ -240,4 +241,12 @@ footer {
 .tmdbSection {
     margin-right: auto;
     margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .movie {
+        height: 38rem;
+    }
+
+    
 }
