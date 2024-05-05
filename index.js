@@ -18,6 +18,20 @@ window.onload = function() {
         const userMenu = document.querySelector('.user-menu');
         userMenu.classList.toggle('hidden');
     });
+
+    const register = document.querySelector('#register');
+    const login = document.querySelector('#login');
+
+    const needTo = document.querySelector('#need-to-btn');
+    needTo.addEventListener('click', function() {
+        register.classList.toggle('hidden');
+        login.classList.toggle('hidden');
+        if (register.classList.contains('hidden')) {
+            needTo.textContent = "Don't have an account? Click here to Register";
+        } else {
+            needTo.textContent = "Already have an account? Click here to Login";
+        }
+    });
 };
 
 

@@ -42,18 +42,22 @@
     </div>
     
     <div class="user-menu hidden">
-        <div class="user-menu-content" id="login">
+        <div class="user-menu-content">
+
+        <svg class="closeButton clickable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+
+        <div id="login">
             <h1>Login</h1>
             <form id="loginForm">
                 <label for="username">Username:</label>
                 <input id="username" type="text" placeholder="Username"><br>
                 <label for="password">Password:</label>
                 <input id="password" type="password" placeholder="Password"><br>
-                <button class="clickable" id="loginButton" type="submit">Login</button>
+                <button class="clickable" id="loginButton" type="submit">Login</button><br>
             </form>
         </div>
 
-        <div class="user-menu-content hidden" id="register">
+        <div class="hidden" id="register">
         <h1>Register</h1>
         <form id="registerForm">
             <label for="newEmail">Email:</label>
@@ -69,7 +73,8 @@
             <button class="clickable" id="registerButton" type="submit">Register</button>
         </form>
         </div>
-
+        <button class="clickable" id="need-to-btn" type="button">Don't have an account? Click to Register</button>
+        </div>
     </div> 
     
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
