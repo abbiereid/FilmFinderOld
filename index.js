@@ -14,8 +14,13 @@ window.onload = function() {
         nav.classList.toggle('hidden');
     });
 
+    const userMenu = document.querySelector('.user-menu');
+
     const userButton = document.querySelector('#user-button').addEventListener('click', function() {
-        const userMenu = document.querySelector('.user-menu');
+        userMenu.classList.toggle('hidden');
+    });
+
+    const closeUserMenu = document.querySelector('.closeButton').addEventListener('click', function() {
         userMenu.classList.toggle('hidden');
     });
 
