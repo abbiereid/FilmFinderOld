@@ -172,18 +172,6 @@ img {
     position: absolute;
 }
 
-.closeButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    width: 3%;
-}
-
-.closeButton:hover {
-    transform: scale(1.03);
-}
-
 .rating {
     display: flex;
     justify-content: center;
@@ -278,19 +266,39 @@ footer {
 }
 
 .user-menu-content form input,
-.user-menu-content form button {
+.user-menu-content button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #888;
 }
 
-.user-menu-content form button {
+.user-menu-content button {
     background-color: var(--primary-color);
     color: white;
 }
 
+.user-menu-content button:hover {
+    background-color: var(--accent-color);
+}
+
+.user-menu-content #register button {
+    margin-bottom: 20px;
+}
+
 .user-menu-content form label {
     font-weight: bold;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    width: 5%;
+}
+
+.closeButton:hover {
+    transform: scale(1.03);
 }
 
 
