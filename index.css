@@ -270,6 +270,7 @@ footer {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #888;
+    font-size: large;
 }
 
 .user-menu-content button {
