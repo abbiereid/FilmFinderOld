@@ -41,6 +41,36 @@
         <div class="expandedImage"></div>
     </div>
     
+    <div class="user-menu hidden">
+        <div id="login">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input id="username" type="text" placeholder="Username"><br>
+                <label for="password">Password:</label>
+                <input id="password" type="password" placeholder="Password"><br>
+                <button class="clickable" id="loginButton" type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="register">
+        <h1>Register</h1>
+        <form id="registerForm">
+            <label for="newEmail">Email:</label>
+            <input id="newEmail" type="email" placeholder="user@example.com"><br>
+            <label for="newUsername">Username:</label>
+            <input id="newUsername" type="text" placeholder="Username"><br>
+            <label for="newPassword">Password:</label>
+            <input id="newPassword" type="password" placeholder="Password"><br>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input id="confirmPassword" type="password" placeholder="Confirm Password"><br>
+            <label for="newDOB">Date of Birth:</label>
+            <input id="newDOB" type="date"><br>
+            <button class="clickable" id="registerButton" type="submit">Register</button>
+        </form>
+        </div>
+
+    </div> 
     
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="index.js"></script>

@@ -13,6 +13,11 @@ window.onload = function() {
     navButton.addEventListener('click', function() {
         nav.classList.toggle('hidden');
     });
+
+    const userButton = document.querySelector('#user-button').addEventListener('click', function() {
+        const userMenu = document.querySelector('.user-menu');
+        userMenu.classList.toggle('hidden');
+    });
 };
 
 
