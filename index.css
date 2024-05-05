@@ -26,6 +26,11 @@ body {
     width: 3%;
 }
 
+#user-button {
+    right: 4%;
+    width: 2.7%;
+}
+
 .menuButton:hover {
     transform: scale(1.03);
 }
