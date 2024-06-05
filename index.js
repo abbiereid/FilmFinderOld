@@ -41,16 +41,22 @@ window.onload = function() {
     document.querySelector('#registerForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        fetch('register.php', {
+        fetch('database.php', {
             method: 'POST',
-            body: new FormData(e.target)
+            body: JSON.stringify({
+                data: new FormData(document.querySelector('#registerForm')),
+                function: 'registerUser'
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
         })
         .then(response => response.json())
         .then(response => {
             console.log(response);
         })
         .catch(error => console.error('Error:', error));
-    });
+        });
 };
 
 
