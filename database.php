@@ -21,7 +21,7 @@ function registerUser($formData) {
     $stmt = $conn->prepare("INSERT INTO users (email, username, password, DOB) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $email, $username, $password, $DOB);
     
-    $success = $stmt->execute();
+    $success = $stmt->execute() ? true : false;
     $stmt->close();
 
     $response = array('success' => $success);
